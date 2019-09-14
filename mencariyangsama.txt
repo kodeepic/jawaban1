@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main(void) {
+  char kalimat[100],kata[10];
+  int jml=0,i,a=0,x=0,p[100],j,y=0,h,q[100],jl=0,b=0;
+  printf("Masukkan sebuah string: " );
+  gets(kalimat);
+  printf("Masukkan kata yang dicari: ");
+  gets(kata);
+  h=(strlen(kata)-1);
+  for(i=0;i<=strlen(kalimat);i++){
+    if(kalimat[i]==kata[a]){
+       p[a]=i;
+       a=a+1;
+       jml=jml+1;
+       if(jml==strlen(kata)){
+          jml=0;
+          a=0;
+          x=x+1;
+          i=p[1];
+       }
+    else{
+      p[a]=NULL;
+      }
+    }
+  }
+   printf("%d \n",x);
+   for(j=(strlen(kalimat)-1);j>=0;j--){
+     if(kalimat[j]==kata[h]){
+       q[b]=j;
+        b=b+1;
+        h=h-1;
+       jl=jl+1;
+       if(jl==strlen(kata)){
+          jl=0;
+          h=(strlen(kata)-1);
+          b=0;
+          y=y+1;
+          j=q[1];
+        }
+    }else{
+      q[b]=NULL;
+    }
+   }
+   printf("%d \n",y);
+   printf("%d \n",x+y);
+}
