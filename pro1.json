@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Return Biodata</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = '{"name":"Arik Sugianto","address":"Probolinggo","hobbies":"Bersepeda","status":"Single","school":"Institut Teknologi Sepuluh Nopember"}';
+var hobbies = '{"Bersepeda","Travelling","Renang","Membaca"}';
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.name + "<br>" +
+obj.address + "<br>" +
+obj.hobbies + "<br>" +
+obj.status + "<br>" +
+obj.school;
+</script>
+
+</body>
+</html>
